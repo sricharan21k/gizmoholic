@@ -1,0 +1,297 @@
+<header
+  class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white py-2 sticky top-0"
+>
+  <nav
+    class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
+    aria-label="Global"
+  >
+    <a
+      class="flex-none text-xl font-semibold text-gray-700 me-5"
+      routerLink="/home"
+      >Gizmoholic</a
+    >
+    <div
+      class="me-auto flex flex-row items-center text-base gap-8 mt-5 sm:justify-end sm:mt-0 sm:ps-5"
+    >
+      <a
+        class="font-medium text-gray-600 hover:text-gray-400"
+        routerLink="/product-list/phone"
+        routerLinkActive="text-gray-800 border-b-2 border-gray-600"
+        >Phone</a
+      >
+      <a
+        class="font-medium text-gray-600 hover:text-gray-400"
+        routerLink="/product-list/tablet"
+        routerLinkActive="text-gray-800 border-b-2 border-gray-600"
+        >Tablet</a
+      >
+      <a
+        class="font-medium text-gray-600 hover:text-gray-400"
+        routerLink="/product-list/laptop"
+        routerLinkActive="text-gray-800 border-b-2 border-gray-600"
+        >Laptop</a
+      >
+      <a
+        class="font-medium text-gray-600 hover:text-gray-400"
+        routerLink="/product-list/watch"
+        routerLinkActive="text-gray-800 border-b-2 border-gray-600"
+        >Watch</a
+      >
+      <a
+        class="font-medium text-gray-600 hover:text-gray-400"
+        routerLink="/product-list/audio"
+        routerLinkActive="text-gray-800 border-b-2 border-gray-600"
+        >Audio</a
+      >
+    </div>
+    <div
+      class="ms-auto flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:ps-5"
+    >
+      <a
+        routerLink="/home"
+        class="p-2 font-medium text-gray-500 hover:bg-gray-100 rounded-full"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="flex-shrink-0 size-5"
+        >
+          <path
+            d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"
+          />
+          <path
+            d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z"
+          />
+        </svg>
+      </a>
+      <a
+        (click)="goBack()"
+        class="p-2 font-medium text-gray-500 hover:bg-gray-100 rounded-full"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          stroke="currentColor"
+          class="flex-shrink-0 size-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+          />
+        </svg>
+      </a>
+      <button
+        disabled
+        (click)="goForward()"
+        class="p-2 font-medium text-gray-500 hover:bg-gray-100 rounded-full disabled:opacity-50 disabled:pointer-events-none"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          stroke="currentColor"
+          class="flex-shrink-0 size-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:ps-5"
+    >
+      <a
+        class="gap-3 font-medium text-gray-500 p-2 hover:bg-gray-100 rounded-full hover:cursor-pointer"
+        data-hs-overlay="#hs-overlay-top"
+        (click)="getData()"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          stroke="currentColor"
+          class="size-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+          />
+        </svg>
+      </a>
+      <a
+        class="relative inline-flex items-center font-medium text-gray-500 p-2 hover:bg-gray-100 rounded-full"
+        routerLink="/cart"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          stroke="currentColor"
+          class="size-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+          />
+        </svg>
+        <span
+          *ngIf="(cartSize | async) !== 0"
+          class="inline-flex items-center ms-1 text-xs font-medium text-gray-600 bg-gray-200 rounded-full py-1 px-2"
+          >{{ cartSize | async }}</span
+        >
+      </a>
+
+      <div class="hs-dropdown relative inline-flex [--trigger:hover]">
+        <a
+          id="hs-dropdown-hover-event"
+          class="hs-dropdown-toggle inline-flex items-center font-medium text-gray-500 p-2 hover:bg-gray-100 rounded-full"
+          routerLink="/profile"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            stroke="currentColor"
+            class="size-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+            />
+          </svg>
+        </a>
+
+        <div
+          *ngIf="!isAuthenticated()"
+          class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-36 bg-white shadow-md rounded-lg p-2 mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
+          aria-labelledby="hs-dropdown-hover-event"
+        >
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+            routerLink="/login"
+          >
+            Sign in
+          </a>
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+            routerLink="/register"
+          >
+            Sign up
+          </a>
+        </div>
+
+        <div
+          *ngIf="isAuthenticated()"
+          class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-36 bg-white shadow-md rounded-lg p-2 mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
+          aria-labelledby="hs-dropdown-hover-event"
+        >
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+            href="#"
+          >
+            My Account
+          </a>
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+            routerLink="/profile"
+            fragment="orders"
+          >
+            Orders
+          </a>
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+            href="#"
+          >
+            Reviews
+          </a>
+          <a
+            class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+            (click)="logout()"
+          >
+            Sign Out
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div
+  id="hs-overlay-top"
+  class="hs-overlay hs-overlay-open:translate-y-0 -translate-y-full fixed top-0 h-96 inset-x-0 transition-all duration-300 transform size-full z-[1000] [--body-scroll:true] [--overlay-backdrop:true] bg-white border-b hidden"
+  tabindex="-1"
+>
+  <div class="flex justify-between items-center py-3 px-4">
+    <h3 class="font-bold text-gray-800">Gizmoholic</h3>
+    <button
+      #closeButton
+      type="button"
+      class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+      data-hs-overlay="#hs-overlay-top"
+    >
+      <span class="sr-only">Close modal</span>
+      <svg
+        class="flex-shrink-0 size-4"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    </button>
+  </div>
+  <div class="p-4">
+    <form (ngSubmit)="search()">
+      <input
+        type="text"
+        class="py-3 px-4 ps-11 mx-auto w-1/2 block bg-gray-100 border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+        placeholder="Search"
+        (input)="filter($event)"
+        [(ngModel)]="searchString"
+        name="search"
+      />
+    </form>
+  </div>
+  <div class="w-1/2 mx-auto">
+    <a
+      (click)="clickCloseButton()"
+      class="hover:bg-gray-400"
+      *ngFor="let product of items.slice(0, 5)"
+      [routerLink]="['/product', product.id]"
+      [queryParams]="{
+        color: (product.colors | keyvalue)[0].key,
+        variant: (product.variants | keyvalue)[0].key
+      }"
+    >
+      <div class="flex items-center hover:bg-gray-50">
+        <img
+          class="size-9"
+          [src]="'assets/' + (product.colors | keyvalue)[0].value"
+          alt=""
+        />
+        <h3 class="p-4 font-semibold">
+          {{ product.brand }} {{ product.model }}
+        </h3>
+      </div>
+    </a>
+  </div>
+</div>

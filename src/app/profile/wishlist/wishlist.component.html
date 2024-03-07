@@ -1,0 +1,16 @@
+<div class="p-8 bg-gray-50">
+  <div *ngIf="wishlist.length !== 0" class="grid grid-cols-2">
+    <div *ngFor="let item of wishlist" class="flex items-center bg-white m-4">
+      <div class="w-1/2">
+        <img [src]="'assets/' + item.product.colors.get(item.color)" alt="" />
+      </div>
+      <div>
+        <h2>{{ item.product.brand }} {{ item.product.model }}</h2>
+        <div>
+          <button (click)="removeFromWishlist(item.item)">remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="clearWishlist()">clear</button>
+</div>
